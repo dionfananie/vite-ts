@@ -26,8 +26,11 @@ const getReturnValues = (countDown: number) => {
   );
   const minutes = Math.floor((countDown % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((countDown % (1000 * 60)) / 1000);
+  const displayHours = hours < 10 ? `0${hours}` : hours;
+  const displayMinutes = minutes < 10 ? `0${minutes}` : minutes;
+  const displaySeconds = seconds < 10 ? `0${seconds}` : seconds;
 
-  return {days, hours, minutes, seconds};
+  return {days, hours: displayHours, minutes: displayMinutes, seconds: displaySeconds};
 };
 
 export { useCountdown };
