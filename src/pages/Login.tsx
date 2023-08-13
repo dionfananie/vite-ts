@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 const Login = () => {
   return (
     <section className="w-screen">
