@@ -14,5 +14,9 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    "no-use-before-define": "error",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
   },
 }
