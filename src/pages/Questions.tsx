@@ -2,9 +2,8 @@ import { useCountdown } from '@/hooks/useCountdown';
 
 const Questions = () => {
   const { hours, minutes, seconds } = useCountdown(
-    new Date('Aug 13, 2023 23:30:00').getTime()
+    new Date('Aug 14, 2023 19:31:30').getTime()
   );
-
   const arrQuestions = new Array(100).fill(0);
   return (
     <div>

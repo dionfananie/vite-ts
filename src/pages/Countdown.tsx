@@ -4,6 +4,7 @@ const Countdown = () => {
   const { hours, minutes, seconds } = useCountdown(
     new Date('Aug 13, 2023 23:30:00').getTime()
   );
+  console.log(seconds);
 
   return (
     <div className="w-screen min-h-screen bg-yellow-500 flex items-center justify-center px-5 py-5">
