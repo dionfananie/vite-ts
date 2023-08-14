@@ -6,6 +6,7 @@ import Countdown from "./pages/Countdown";
 import Questions from "./pages/Questions";
 
 import { AppProvider } from "./contexts/App";
+import ThankYou from "./pages/ThankYou";
 
 export const App = () => {
   return (
@@ -17,6 +18,7 @@ export const App = () => {
         <Route path="/kompetensi" element={<Questions />} />
         <Route path="/inggris" element={<Questions />} />
         <Route path="/indo" element={<Questions />} />
+        <Route path="/thankyou" element={<ThankYou />} />
       </Routes>
     </AppProvider>
   );
