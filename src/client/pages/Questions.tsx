@@ -1,4 +1,5 @@
 import { useCountdown } from "../hooks/useCountdown";
+import React from "react";
 
 const Questions = () => {
   const { hours, minutes, seconds } = useCountdown(new Date("Aug 14, 2023 19:31:30").getTime());

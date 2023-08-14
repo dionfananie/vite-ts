@@ -1,11 +1,10 @@
+import React from "react";
+
 const Login = () => {
   return (
     <section className="w-screen">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-        <a
-          href="#"
-          className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
-        >
+        <a href="#" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
           <img
             className="w-8 h-8 mr-2"
             src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg"
@@ -20,10 +19,7 @@ const Login = () => {
             </h1>
             <form className="space-y-4 md:space-y-6" action="#">
               <div>
-                <label
-                  htmlFor="email"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
+                <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   Your email
                 </label>
                 <input
@@ -36,10 +32,7 @@ const Login = () => {
                 />
               </div>
               <div>
-                <label
-                  htmlFor="password"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
+                <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   Password
                 </label>
                 <input
@@ -63,18 +56,12 @@ const Login = () => {
                     />
                   </div>
                   <div className="ml-3 text-sm">
-                    <label
-                      htmlFor="remember"
-                      className="text-gray-500 dark:text-gray-300"
-                    >
+                    <label htmlFor="remember" className="text-gray-500 dark:text-gray-300">
                       Remember me
                     </label>
                   </div>
                 </div>
-                <a
-                  href="#"
-                  className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500"
-                >
+                <a href="#" className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">
                   Forgot password?
                 </a>
               </div>
@@ -85,11 +72,8 @@ const Login = () => {
                 Sign in
               </button>
               <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                Don’t have an account yet?{' '}
-                <a
-                  href="#"
-                  className="font-medium text-primary-600 hover:underline dark:text-primary-500"
-                >
+                Don’t have an account yet?{" "}
+                <a href="#" className="font-medium text-primary-600 hover:underline dark:text-primary-500">
                   Sign up
                 </a>
               </p>

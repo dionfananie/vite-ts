@@ -14,7 +14,7 @@ const getStyleSheets = async () => {
     const assetpath = resolve("dist/assets");
     const files = await fs.readdir(assetpath);
     const cssAssets = files.filter(l => l.endsWith(".css"));
-    const allContent:string[] = [];
+    const allContent = [];
     for (const asset of cssAssets) {
       const content = await fs.readFile(path.join(assetpath, asset), "utf-8");
       allContent.push(`<style type="text/css">${content}</style>`);
@@ -67,8 +67,8 @@ async function createServer(isProd = process.env.NODE_ENV === "production") {
       // 3. Load the server entry. vite.ssrLoadModule automatically transforms
       //    your ESM source code to be usable in Node.js! There is no bundling
       //    required, and provides efficient invalidation similar to HMR.
-      const productionBuildPath = path.join(__dirname, "./dist/server/entry-server.mjs");
-      const devBuildPath = path.join(__dirname, "./src/client/entry-server.tsx");
+      let productionBuildPath = path.join(__dirname, "./dist/server/entry-server.mjs");
+      let devBuildPath = path.join(__dirname, "./src/client/entry-server.tsx");
       const { render } = await vite.ssrLoadModule(isProd ? productionBuildPath : devBuildPath);
 
       // 4. render the app HTML. This assumes entry-server.js's exported `render`
@@ -82,14 +82,13 @@ async function createServer(isProd = process.env.NODE_ENV === "production") {
 
       // 6. Send the rendered HTML back.
       res.status(200).set({ "Content-Type": "text/html" }).end(html);
-    } catch (e: unknown) {
-      const err  = e as Error;
-      !isProd && vite.ssrFixStacktrace(err);
-      console.log(err.stack);
+    } catch (e: any) {
+      !isProd && vite.ssrFixStacktrace(e);
+      console.log(e.stack);
       // If an error is caught, let Vite fix the stack trace so it maps back to
       // your actual source code.
-      vite.ssrFixStacktrace(err);
-      next(err);
+      vite.ssrFixStacktrace(e);
+      next(e);
     }
   });
   const port = process.env.PORT || 7456;
