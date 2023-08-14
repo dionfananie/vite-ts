@@ -2,7 +2,7 @@ import React from "react";
 import { useCountdown } from "../hooks/useCountdown";
 
 const Countdown = () => {
-  const { hours, minutes, seconds } = useCountdown(new Date("Aug 13, 2023 23:30:00").getTime());
+  const { hours, minutes, seconds } = useCountdown(new Date("Aug 19, 2023 23:30:00").getTime());
   console.log(seconds);
 
   return (

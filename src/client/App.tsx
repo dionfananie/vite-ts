@@ -14,7 +14,9 @@ export const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/countdown" element={<Countdown />} />
-        <Route path="/questions" element={<Questions />} />
+        <Route path="/kompetensi" element={<Questions />} />
+        <Route path="/inggris" element={<Questions />} />
+        <Route path="/indo" element={<Questions />} />
       </Routes>
     </AppProvider>
   );
